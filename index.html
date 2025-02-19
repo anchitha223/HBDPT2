@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="valentine-confession.css">
+        <title>Valentine Confession</title>
+    </head>
+    <body>
+        <p class="instruction">Click the heart!</p>
+
+        <div class="container">
+            <label>
+                <div class="heart" onclick="toggleMusic()">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg"></img>
+                </div>
+                <input id="messageState" type="checkbox" style="display:none"/>
+            </label>
+
+            <div class="message">
+                <h1 style="font-family: Cinzel, serif; font-size: 40px; letter-spacing: 1.2px;">Dear P'TUCK,</h1>
+                <p> 
+                    <span>
+                        &emsp; "สุขสันต์วันเกิดนะคะ ขอให้พี่ตั๊กมีความสุขมาก ๆ สุขภาพร่างกายแข็งแรง ประสบความสำเร็จในทุกสิ่งที่ตั้งใจ และขอให้ปีนี้เป็นปีที่ดีสำหรับพี่ค่ะ"
+                    </span>
+                    <br> <br>
+                    <span style="display: block; text-align: center;">
+                        <img src="28715.jpg" alt="Valentine's Message" style="max-width: 70%; height: auto;">
+                    </span>
+                </p>
+                <br>
+                <div class="sincere">
+                    <p style="font-weight: bold;"> 🎂</p>
+                    <p>Internship mentor</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio element -->
+        <audio id="bg-music">
+            <source src="[THAISUB] All I Ever Need - Austin Mahone.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <script src="jquery.js"></script>
+        <script src="jquery2.1.js"></script>
+        <script defer src="valentine-confession.js"></script>
+
+        <script>
+            function toggleMusic() {
+                var music = document.getElementById("bg-music");
+                if (music.paused) {
+                    music.play();
+                } else {
+                    music.pause();
+                }
+            }
+        </script>
+    </body>
+</html>
